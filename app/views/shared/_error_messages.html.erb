@@ -2,7 +2,7 @@
   <div><%= pluralize(@user.errors.count, 'error') %></div>
   <ul>
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <%= content_tag(:li, msg) %>
     <% end %>
   </ul>
 <% end %>

@@ -1,0 +1,15 @@
+<h1>Sign in</h1>
+
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit 'sign in!!' %>
+<% end %>
+
+<p>Sign upは<%= link_to 'こちら', signup_path %></p>
